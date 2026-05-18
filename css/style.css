@@ -161,7 +161,7 @@ nav {
 #top-total,
 #top-active,
 #top-completed {
-  padding: 10px 0 0;
+  padding: 10px 0 10px 0;
   flex: 1;
   text-align: center;
   background-color: var(--bg-surface);
@@ -551,12 +551,18 @@ footer a:hover {
   }
 
   .filter-category {
-    font-size: 0.75rem;
+    font-size: 0.6rem;
     padding: 4px 10px;
   }
 
+  #task-filter>div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+  }
+
   #clear-btn {
-    font-size: 0.75rem;
+    font-size: 0.6rem;
     padding: 4px 10px;
   }
 
