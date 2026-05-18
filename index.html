@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Taskr — A clean, fast focus app to manage your tasks with categories, priorities and due dates." />
+  <title>Taskr — Your Focus App</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Fira+Code:wght@300..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <nav>
+    <div id="logo">
+      <h1>📋 Taskr</h1>
+      <p>Your Focus App</p>
+    </div>
+    <button id="theme" aria-label="Toggle theme">🌙 Dark</button>
+  </nav>
+
+  <main>
+
+    <!-- Stats -->
+    <div id="task-container">
+      <div id="top-total">
+        <h3 id="total">0</h3>
+        <p>Total Tasks</p>
+      </div>
+      <div id="top-active">
+        <h3 id="active">0</h3>
+        <p>Active</p>
+      </div>
+      <div id="top-completed">
+        <h3 id="completed">0</h3>
+        <p>Completed</p>
+      </div>
+    </div>
+
+    <!-- Add Task -->
+    <div id="task-entry">
+      <div class="section-label">
+        <div class="seperator"></div>
+        <span class="label-text">ADD TASK</span>
+        <div class="seperator"></div>
+      </div>
+
+      <div id="task-input">
+        <input type="text" id="text-input" placeholder="Quick add — type task and press Enter..." autocomplete="off" aria-label="Task name" />
+        <button id="add-btn">+ Add Task</button>
+      </div>
+
+      <div id="task-row2">
+        <div id="task-category">
+          <input type="radio" name="category" id="work"     value="work"     checked hidden />
+          <label for="work">Work</label>
+          <input type="radio" name="category" id="health"   value="health"   hidden />
+          <label for="health">Health</label>
+          <input type="radio" name="category" id="personal" value="personal" hidden />
+          <label for="personal">Personal</label>
+          <input type="radio" name="category" id="study"    value="study"    hidden />
+          <label for="study">Study</label>
+        </div>
+        <div id="task-priority">
+          <input type="radio" name="priority" id="high" value="high"   checked hidden />
+          <label for="high">🔴 High</label>
+          <input type="radio" name="priority" id="med"  value="medium" hidden />
+          <label for="med">🟡 Medium</label>
+          <input type="radio" name="priority" id="low"  value="low"    hidden />
+          <label for="low">🟢 Low</label>
+        </div>
+        <div id="due-date">
+          <p>Due :</p>
+          <input type="date" id="due-date-input" aria-label="Due date" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Filter -->
+    <div id="task-filter">
+      <div>
+        <input type="radio" name="filter" id="filter-all"       value="all"       checked />
+        <label for="filter-all"       class="filter-category">All <span id="span-all">0</span></label>
+        <input type="radio" name="filter" id="filter-active"    value="active" />
+        <label for="filter-active"    class="filter-category">Active <span id="span-active">0</span></label>
+        <input type="radio" name="filter" id="filter-completed" value="completed" />
+        <label for="filter-completed" class="filter-category">Completed <span id="span-completed">0</span></label>
+      </div>
+      <button id="clear-btn">❌ Clear Done</button>
+    </div>
+
+    <!-- Active Tasks -->
+    <div id="label-active" class="section-label">
+      <div class="seperator"></div>
+      <span class="label-text">ACTIVE</span>
+      <div class="seperator"></div>
+    </div>
+    <div id="tasks-active">
+      <div class="empty-state" id="empty-active">No active tasks. Add one above ☝️</div>
+    </div>
+
+    <!-- Completed Tasks -->
+    <div id="label-completed" class="section-label">
+      <div class="seperator"></div>
+      <span class="label-text">COMPLETED</span>
+      <div class="seperator"></div>
+    </div>
+    <div id="task-completed">
+      <div class="empty-state" id="empty-completed">No completed tasks yet 🎯</div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Taskr. All rights reserved.<br />
+      Built with 🖤 by
+      <a href="https://github.com/ag-swapnil1" target="_blank" rel="noopener noreferrer">Swapnil Agrahari</a>
+    </p>
+  </footer>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>
